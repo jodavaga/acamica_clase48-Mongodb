@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+const testRouter = require('./routes/primeraRouter');
+
 const app = express();
 
 // Morgan - console print log request
@@ -15,6 +17,9 @@ app.get('/', (req, res) => {
         message: "Broker Agency API"
     })
 });
+
+// First router from /test
+app.use('/test', testRouter);
 
 // Mongoose connection
 mongoose.connect(process.env.MONGODB_URI, {
