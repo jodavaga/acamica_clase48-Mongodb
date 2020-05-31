@@ -6,7 +6,7 @@ different steps during process:
 ### Branches
 
 * 0-base - Project setup base
-* 1-enviroment - Using **dotenv** to setup environment variables. Add **Router** to create enpoints.
+* 1-environment - Using **dotenv** to setup environment variables. Setup Port by 3000.
 * 2-mongoose - Using **Mongoose** to conecct to MongoDB. Adding *POST* and *GET* endpoints for **Broker Agency**
 
 ## Setup

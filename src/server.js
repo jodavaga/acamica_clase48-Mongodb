@@ -1,11 +1,17 @@
 const express = require('express');
+const morgan = require('morgan');
+require('dotenv').config();
 
 const app = express();
+
+app.use(morgan('dev'));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send({
         message: "Broker Agency API"
     })
-})
+});
 
-app.listen('3000', () => console.log('Listening by port: 3000'));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Listening by port: ${PORT}`));
