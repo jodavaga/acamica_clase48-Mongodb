@@ -7,8 +7,9 @@ different steps during process:
 
 * 0-base - Project setup base
 * 1-environment - Using **dotenv** to setup environment variables. Setup Port by 3000.
-* 2-mongoose - Using **Mongoose** to conecct to MongoDB. Adding *POST* and *GET* endpoints for **Broker Agency**
-
+* 2-mongoose - Using **Mongoose** to conecct to MongoDB.
+* 3-router - Using express router to manage and setup endpoints.
+* 4-mongoose - Using mongoose. *Adding *POST* and *GET* endpoints for **Broker Agency**.
 ## Setup
 
 ```
