@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const testRouter = require('./routes/primeraRouter');
+const alumnRouter = require('./routes/alumnRouter');
 
 const app = express();
 
@@ -20,6 +21,9 @@ app.get('/', (req, res) => {
 
 // First router from /test
 app.use('/test', testRouter);
+
+// Second router from /alumns
+app.use('/', alumnRouter);
 
 // Mongoose connection
 mongoose.connect(process.env.MONGODB_URI, {
